@@ -7,6 +7,7 @@ dotenv.config();
 
 const { importModels } = require('./models');
 const users = require('./routes/users');
+const request_coverage = require('./routes/request_coverage');
 
 const PORT = process.env.PORT || 3000;
 const DB_HOST = process.env.DB_HOST || 'localhost';
@@ -42,6 +43,7 @@ db.authenticate().then(() => db.sync().then(() => {
     server.use(cookieParser());
 
     server.use('/users', users(db));
+    server.use('/request_coverage', request_coverage(db));
 
     server.listen(PORT, () => console.log(`Rampart is live on port ${PORT}!`));
 })).catch(err => console.error('Unable to connect to database:', err));

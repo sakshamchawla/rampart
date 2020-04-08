@@ -1,0 +1,17 @@
+CREATE TABLE "request_coverage"
+(
+  "org_name"          TEXT NULL,
+  "contact_name"      TEXT NOT NULL,
+  "contact_email"     TEXT NOT NULL,
+  "contact_phone"     TEXT NOT NULL,
+  "event_name"        TEXT NULL,
+  "event_location"    TEXT NOT NULL,
+  "date"              DATE NOT NULL,
+  "arrival_time"      TIME NOT NULL,
+  "event_type"        TEXT NOT NULL,
+  "expected_outcome"    INT NOT NULL,
+  "expected_duration" NUMERIC(3, 1) NOT NULL,
+  "tier"              TEXT NOT NULL,
+  "IP"                TEXT NOT NULL,
+  "created"           TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

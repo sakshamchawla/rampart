@@ -26,6 +26,8 @@ const importModels = (db) => {
     db.import('./users_eval_items.js');
     db.import('./users_checklist_items.js');
     db.import('./promo_request_votes.js');
+    db.import('./request_coverage.js');
+    db.import('./request_class.js');
 };
 
 module.exports = { importModels };
