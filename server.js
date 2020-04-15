@@ -3,11 +3,13 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const Sequelize = require('sequelize');
 const dotenv = require('dotenv');
+const cors = require('cors');
 dotenv.config();
 
 const { importModels } = require('./models');
 const users = require('./routes/users');
 const request_coverage = require('./routes/request_coverage');
+const test = require('./routes/test');
 
 const PORT = process.env.PORT || 3000;
 const DB_HOST = process.env.DB_HOST || 'localhost';
@@ -41,9 +43,9 @@ db.authenticate().then(() => db.sync().then(() => {
     server.use(express.json());
     server.use(express.urlencoded({ extended: false }));
     server.use(cookieParser());
-
+    server.use(cors());
     server.use('/users', users(db));
     server.use('/request_coverage', request_coverage(db));
-
+    server.use('/test', test(db));
     server.listen(PORT, () => console.log(`Rampart is live on port ${PORT}!`));
 })).catch(err => console.error('Unable to connect to database:', err));

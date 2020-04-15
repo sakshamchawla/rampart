@@ -4,6 +4,9 @@ CREATE TABLE "request_coverage"
   "contact_name"      TEXT NOT NULL,
   "contact_email"     TEXT NOT NULL,
   "contact_phone"     TEXT NOT NULL,
+  "secondary_contact_name"     TEXT NULL,
+  "secondary_contact_phone"     TEXT NULL,
+  "secondary_contact_email"     TEXT NULL,
   "event_name"        TEXT NULL,
   "event_location"    TEXT NOT NULL,
   "date"              DATE NOT NULL,
@@ -12,6 +15,7 @@ CREATE TABLE "request_coverage"
   "expected_outcome"    INT NOT NULL,
   "expected_duration" NUMERIC(3, 1) NOT NULL,
   "tier"              TEXT NOT NULL,
-  "IP"                TEXT NOT NULL,
+  "more_info"                TEXT NOT NULL,
   "created"           TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  "updated"    timestamp NULL  
 );

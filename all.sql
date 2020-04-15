@@ -31,3 +31,4 @@
 \i /home/schema/promo_request_votes.sql
 \i /home/schema/request_coverage.sql
 \i /home/schema/request_class.sql
+\i /home/schema/test.sql
