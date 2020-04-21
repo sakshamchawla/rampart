@@ -7,6 +7,6 @@ CREATE TABLE "request_class"
      "bls_interested"                BOOLEAN NULL DEFAULT NULL,
      "heartsaver_aed_interested"     BOOLEAN NULL DEFAULT NULL,
      "heartsaver_firstaid_interested" BOOLEAN NULL DEFAULT NULL,
-     "created"                       TIMESTAMP NOT NULL DEFAULT
-     CURRENT_TIMESTAMP
+     "created"                       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+     "updated"                        TIMESTAMP NULL
   );

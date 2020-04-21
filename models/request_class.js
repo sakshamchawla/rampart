@@ -14,26 +14,35 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        bls_interested: {
+        class_type: {
             type: DataTypes.TEXT,
+            allowNull: false,
+        },
+        bls_interested: {
+            type: DataTypes.BOOLEAN,
             allowNull: true,
         },
         heartsaver_aed_interested: {
-            type: DataTypes.TEXT,
+            type: DataTypes.BOOLEAN,
             allowNull: true,
         },
         heartsaver_firstaid_interested: {
-            type: DataTypes.DATE,
+            type: DataTypes.BOOLEAN,
             allowNull: true,
         },
         created: {
             type: DataTypes.DATE,
             allowNull: false,
         },
+        updated: {
+          type: DataTypes.DATE,
+          allowNull: false
+        }
     }, {
         tableName: 'request_class',
         timestamps: true,
         createdAt: 'created',
+        updatedAt: 'updated',
         freezeTableName: true
     });
 };
