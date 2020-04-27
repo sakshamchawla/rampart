@@ -29,7 +29,7 @@ module.exports = db => {
     expected_outcome: expected_outcome,
     expected_duration: expected_duration,
     more_info: more_info,
-    tier: service_tier
+    tier: tier
     */
 
     org_name = req.body.org_name;
@@ -90,7 +90,7 @@ module.exports = db => {
         res.json(false);
 
     more_info = req.body.more_info;
-    service_tier = req.body.ier;
+    tier = req.body.tier;
 
 
     // prints out "true" in JSON if successful, false if failed

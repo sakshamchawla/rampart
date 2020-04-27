@@ -16,6 +16,6 @@ CREATE TABLE "request_coverage"
   "expected_duration" NUMERIC(3, 1) NOT NULL,
   "tier"              TEXT NOT NULL,
   "more_info"                TEXT NULL,
-  "created"           TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+  "created"           TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   "updated"    timestamp NULL
 );
